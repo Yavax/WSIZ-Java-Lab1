@@ -15,9 +15,8 @@ public class FirstWindow {
     
     public static void main(String[] args){
         
-        int i, j, num_line, num_column, num_char;
+        int i, j, num_line;
         String s, picture;
-        char z;
         boolean condition;
         
         do{
