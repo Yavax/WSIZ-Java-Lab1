@@ -5,13 +5,42 @@
  */
 package WindowApp;
 
+import javax.swing.JOptionPane;
+
 /**
  *
- * @author Ja
+ * @author Pawel
  */
 public class FirstWindow {
     
     public static void main(String[] args){
         
+        int i, j, num_line, num_column, num_char;
+        String s, picture;
+        char z;
+        boolean condition;
+        
+        do{
+            s=JOptionPane.showInputDialog(null, "Podaj liczbe wierszy");
+            num_line=Integer.parseInt(s);
+            condition=!(num_line >= 3 && num_line <=10);
+            
+            if(condition){
+                JOptionPane.showMessageDialog(null, "Nieprawidłowa liczba wierszy " + num_line);
+            }
+        }while(condition);
+        s = JOptionPane.showInputDialog(null,"Podaj znak wypelnienia");
+        
+        //Rysuj kwadrat
+        picture = "";
+        
+        for(i = 0; i<num_line; i++){
+            for(j = 0; j<num_line; j++){
+                picture += (s+ " ");
+            }
+            picture += "\n";
+        }
+        
+        JOptionPane.showMessageDialog(null, picture);
     }
 }
